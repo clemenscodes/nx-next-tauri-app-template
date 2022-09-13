@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "tauri-frontend": "apps/tauri-frontend",
-    "tauri-frontend-e2e": "apps/tauri-frontend-e2e"
+    "tauri-frontend-e2e": "apps/tauri-frontend-e2e",
+    "tauri_rust": "apps/tauri_rust"
   }
 }

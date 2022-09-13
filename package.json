@@ -5,11 +5,14 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "export": "nx export",
+    "lint": "nx lint"
   },
   "private": true,
   "dependencies": {
     "@nrwl/next": "14.7.5",
+    "@nxrs/cargo": "^0.3.3",
     "core-js": "^3.6.5",
     "next": "12.2.5",
     "react": "18.2.0",
