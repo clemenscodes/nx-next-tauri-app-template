@@ -7,12 +7,12 @@
       "executor": "@nrwl/cypress:cypress",
       "options": {
         "cypressConfig": "apps/frontend-e2e/cypress.config.ts",
-        "devServerTarget": "frontend:serve:development",
+        "devServerTarget": "frontend:dev:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "frontend:serve:production"
+          "devServerTarget": "frontend:dev:production"
         }
       }
     },
