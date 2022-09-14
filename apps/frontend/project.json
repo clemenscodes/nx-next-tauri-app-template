@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/tauri-frontend",
+  "sourceRoot": "apps/frontend",
   "projectType": "application",
   "targets": {
     "build": {
@@ -8,30 +8,30 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/tauri-frontend",
-        "outputPath": "dist/apps/tauri-frontend"
+        "root": "apps/frontend",
+        "outputPath": "dist/apps/frontend"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/tauri-frontend"
+          "outputPath": "apps/frontend"
         },
         "production": {}
       }
     },
-    "serve": {
+    "dev": {
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "tauri-frontend:build",
+        "buildTarget": "frontend:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "tauri-frontend:build:development",
+          "buildTarget": "frontend:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "tauri-frontend:build:production",
+          "buildTarget": "frontend:build:production",
           "dev": false
         }
       }
@@ -39,14 +39,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "tauri-frontend:build:production"
+        "buildTarget": "frontend:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/tauri-frontend"],
+      "outputs": ["coverage/apps/frontend"],
       "options": {
-        "jestConfig": "apps/tauri-frontend/jest.config.ts",
+        "jestConfig": "apps/frontend/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -54,7 +54,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/tauri-frontend/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },

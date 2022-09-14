@@ -1,29 +1,18 @@
 {
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/tauri_rust/src",
+  "sourceRoot": "apps/client/src",
   "targets": {
     "build": {
-      "executor": "@nxrs/cargo:build",
+      "executor": "nx:run-commands",
       "options": {
-        "release": false
-      },
-      "configurations": {
-        "production": {
-          "release": true
-        }
+        "command": "cargo tauri build"
       }
     },
     "dev": {
       "executor": "nx:run-commands",
       "options": {
         "command": "cargo tauri dev"
-      }
-    },
-    "tauri_build": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "cargo tauri build"
       }
     },
     "test": {

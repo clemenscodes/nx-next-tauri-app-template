@@ -1,12 +1,12 @@
 {
   "build": {
-    "beforeBuildCommand": "npm run build && npm run export",
-    "beforeDevCommand": "npm run start",
+    "beforeDevCommand": "npm run frontend:dev",
+    "beforeBuildCommand": "npm run frontend:build && npm run frontend:export",
     "devPath": "http://localhost:4200",
-    "distDir": "../../dist/apps/tauri-frontend/exported"
+    "distDir": "../../dist/apps/frontend/exported"
   },
   "package": {
-    "productName": "my-tauri",
+    "productName": "Networth Tracker",
     "version": "0.1.0"
   },
   "tauri": {
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev.tauri-test",
+      "identifier": "networth-tracker",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,7 +57,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "tauri-test",
+        "title": "Networth Tracker",
         "width": 800
       }
     ]

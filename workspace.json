@@ -2,8 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "tauri-frontend": "apps/tauri-frontend",
-    "tauri-frontend-e2e": "apps/tauri-frontend-e2e",
-    "tauri_rust": "apps/tauri_rust"
+    "frontend": "apps/frontend",
+    "frontend-e2e": "apps/frontend-e2e",
+    "client": "apps/client"
   }
 }

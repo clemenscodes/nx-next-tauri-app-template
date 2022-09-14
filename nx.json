@@ -52,6 +52,6 @@
       }
     }
   },
-  "defaultProject": "tauri-frontend",
+  "defaultProject": "client",
   "plugins": ["@nxrs/cargo"]
 }

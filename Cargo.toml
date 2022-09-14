@@ -1,4 +1,4 @@
 [workspace]
 members = [
-    "apps/tauri_rust"
+    "apps/client"
 ]
