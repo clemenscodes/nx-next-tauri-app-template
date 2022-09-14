@@ -15,7 +15,7 @@
         "ci:test": "nx affected --target=test --parallel",
         "ci:e2e": "nx affected --target=e2e --parallel",
         "format": "nx format:write --projects=frontend,frontend-e2e",
-        "format:check": "nx run client:format && nx format:check --projects=frontend,frontend-e2e"
+        "format:check": "nx format:check --projects=frontend,frontend-e2e"
     },
     "private": true,
     "dependencies": {

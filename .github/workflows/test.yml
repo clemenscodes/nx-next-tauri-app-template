@@ -67,6 +67,7 @@ jobs:
         run: npm run ci:build
 
       - name: Format
+        if: matrix.platform != 'windows-latest'
         run: npm run format:check
 
       - name: Lint
