@@ -6,13 +6,13 @@
     "build": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cargo tauri build"
+        "command": "tauri build"
       }
     },
     "dev": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "cargo tauri dev"
+        "command": "tauri dev"
       }
     },
     "test": {

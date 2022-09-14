@@ -1,9 +1,6 @@
 import { invoke } from "@tauri-apps/api/tauri";
 import { useState } from "react";
 import Image from "next/image";
-import reactLogo from "../assets/react.svg";
-import tauriLogo from "../assets/tauri.svg";
-import nextLogo from "../assets/next.svg";
 import styles from './index.module.scss';
 
 export function Index() {
@@ -24,7 +21,7 @@ export function Index() {
                             <Image
                                 width={144}
                                 height={144}
-                                src={nextLogo}
+                                src="/assets/next.svg"
                                 className="logo next"
                                 alt="Next logo"
                             />
@@ -35,7 +32,7 @@ export function Index() {
                             <Image
                                 width={144}
                                 height={144}
-                                src={tauriLogo}
+                                src="/assets/tauri.svg"
                                 className="logo tauri"
                                 alt="Tauri logo"
                             />
@@ -46,7 +43,7 @@ export function Index() {
                             <Image
                                 width={144}
                                 height={144}
-                                src={reactLogo}
+                                src="/assets/react.svg"
                                 className="logo react"
                                 alt="React logo"
                             />
