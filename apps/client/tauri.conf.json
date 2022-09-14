@@ -6,7 +6,7 @@
         "distDir": "../../dist/apps/frontend/exported"
     },
     "package": {
-        "productName": "Networth Tracker",
+        "productName": "Nx-Next-Tauri-App-Template",
         "version": "0.1.0"
     },
     "tauri": {
@@ -28,7 +28,7 @@
                 "icons/icon.icns",
                 "icons/icon.ico"
             ],
-            "identifier": "networth-tracker",
+            "identifier": "nx-next-tauri-app-template",
             "longDescription": "",
             "macOS": {
                 "entitlements": null,
@@ -57,7 +57,7 @@
                 "fullscreen": false,
                 "height": 600,
                 "resizable": true,
-                "title": "Networth Tracker",
+                "title": "nx-next-tauri-app-template",
                 "width": 800
             }
         ]

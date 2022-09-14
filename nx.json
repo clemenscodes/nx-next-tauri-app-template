@@ -1,6 +1,6 @@
 {
     "$schema": "./node_modules/nx/schemas/nx-schema.json",
-    "npmScope": "next-tauri",
+    "npmScope": "nx-next-tauri-app-template",
     "affected": {
         "defaultBase": "main"
     },
