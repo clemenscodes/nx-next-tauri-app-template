@@ -1,15 +1,15 @@
-import { invoke } from "@tauri-apps/api/tauri";
-import { useState } from "react";
-import Image from "next/image";
+import { invoke } from '@tauri-apps/api/tauri';
+import { useState } from 'react';
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 export function Index() {
-    const [greetMsg, setGreetMsg] = useState("");
-    const [name, setName] = useState("");
+    const [greetMsg, setGreetMsg] = useState('');
+    const [name, setName] = useState('');
 
     async function greet() {
         // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-        setGreetMsg(await invoke("greet", { name }));
+        setGreetMsg(await invoke('greet', { name }));
     }
     return (
         <div className={styles.page}>
@@ -17,7 +17,11 @@ export function Index() {
                 <h1>Welcome to Tauri!</h1>
                 <div className="row">
                     <span className="logos">
-                        <a href="https://nextjs.org" target="_blank" rel="noreferrer">
+                        <a
+                            href="https://nextjs.org"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Image
                                 width={144}
                                 height={144}
@@ -28,7 +32,11 @@ export function Index() {
                         </a>
                     </span>
                     <span className="logos">
-                        <a href="https://tauri.app" target="_blank" rel="noreferrer">
+                        <a
+                            href="https://tauri.app"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Image
                                 width={144}
                                 height={144}
@@ -39,7 +47,11 @@ export function Index() {
                         </a>
                     </span>
                     <span className="logos">
-                        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
+                        <a
+                            href="https://reactjs.org"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
                             <Image
                                 width={144}
                                 height={144}

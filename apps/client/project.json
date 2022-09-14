@@ -1,32 +1,38 @@
 {
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "projectType": "application",
-  "sourceRoot": "apps/client/src",
-  "targets": {
-    "build": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tauri build"
-      }
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "projectType": "application",
+    "sourceRoot": "apps/client/src",
+    "targets": {
+        "build": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "tauri build"
+            }
+        },
+        "dev": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "tauri dev"
+            }
+        },
+        "format": {
+            "executor": "nx:run-commands",
+            "options": {
+                "command": "cargo fmt --all -- --check"
+            }
+        },
+        "test": {
+            "executor": "@nxrs/cargo:test",
+            "options": {}
+        },
+        "lint": {
+            "executor": "@nxrs/cargo:clippy",
+            "options": {
+                "fix": false,
+                "failOnWarnings": true,
+                "noDeps": true
+            }
+        }
     },
-    "dev": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "tauri dev"
-      }
-    },
-    "test": {
-      "executor": "@nxrs/cargo:test",
-      "options": {}
-    },
-    "lint": {
-      "executor": "@nxrs/cargo:clippy",
-      "options": {
-        "fix": false,
-        "failOnWarnings": true,
-        "noDeps": true
-      }
-    }
-  },
-  "tags": []
+    "tags": []
 }
