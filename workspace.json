@@ -1,9 +1,9 @@
 {
-  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
-  "version": 2,
-  "projects": {
-    "frontend": "apps/frontend",
-    "frontend-e2e": "apps/frontend-e2e",
-    "client": "apps/client"
-  }
+    "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+    "version": 2,
+    "projects": {
+        "client": "apps/client",
+        "frontend": "apps/frontend",
+        "frontend-e2e": "apps/frontend-e2e"
+    }
 }
