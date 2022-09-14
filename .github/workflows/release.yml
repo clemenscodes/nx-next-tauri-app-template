@@ -41,7 +41,7 @@ jobs:
         uses: actions/cache@v2
         with:
             path: |
-                ~/dist
+                ${{ github.workspace }}/dist
             key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
             restore-keys: |
                 ${{ runner.os }}-node-
@@ -50,7 +50,7 @@ jobs:
         uses: actions/cache@v2
         with:
             path: |
-                ~/target
+                ${{ github.workspace }}/target
             key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
             restore-keys: |
                 ${{ runner.os }}-cargo-
