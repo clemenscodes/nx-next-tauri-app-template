@@ -7,16 +7,15 @@
         "build": "nx build",
         "test": "nx test",
         "lint": "nx lint",
-        "tauri": "tauri",
         "frontend:dev": "nx run frontend:dev",
-        "frontend:build": "nx run frontend:build",
-        "frontend:export": "nx run frontend:export",
-        "ci:build": "nx build --skip-nx-cache",
-        "ci:lint": "nx affected --target=lint --parallel",
+        "frontend:build": "nx affected --target=build --all=true --parallel=true --exclude=client",
+        "frontend:export": "nx affected --target=export --all=true --parallel=true --exclude=client",
+        "ci:build": "npm run build",
+        "ci:lint": "nx affected --target=lint --exclude=client --parallel",
         "ci:test": "nx affected --target=test --parallel",
         "ci:e2e": "nx affected --target=e2e --parallel",
-        "format": "nx format:write --projects=client,frontend,frontend-e2e",
-        "format:check": "nx run client:format && nx format:check --projects=client,frontend,frontend-e2e"
+        "format": "nx format:write --projects=frontend,frontend-e2e",
+        "format:check": "nx run client:format && nx format:check --projects=frontend,frontend-e2e"
     },
     "private": true,
     "dependencies": {
