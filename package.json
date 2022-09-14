@@ -11,7 +11,7 @@
     "frontend:dev": "nx run frontend:dev",
     "frontend:build": "nx run frontend:build",
     "frontend:export": "nx run frontend:export",
-    "ci:build": "npm run frontend:build && npm run frontend:export",
+    "ci:build": "npm run build",
     "ci:lint": "nx affected --target=lint --parallel --skip-nx-cache",
     "ci:test": "nx affected --target=test --parallel --skip-nx-cache",
     "ci:e2e": "nx affected --target=e2e --parallel --skip-nx-cache"
